@@ -1,0 +1,13 @@
+<div *ngIf="response">
+    <div *ngFor="let article of response">
+        <app-article
+            [title] = "article.title"
+            [byline] = "article.byline"
+            [abstract] = "article.abstract"
+            [section] = "article.section"
+            [imageUrl] = "article.media[0]['media-metadata'][0].url"
+            [url] = "article.url"
+        ></app-article>
+    </div>
+</div>
+
