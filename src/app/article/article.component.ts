@@ -15,8 +15,13 @@ export class ArticleComponent implements OnInit {
   @Input() imageUrl = '';
   @Input() section = '';
   @Input() url = '';
+  @Input() alt = '';
 
   ngOnInit(): void {
+  }
+
+  openArticle(url: string): void{
+    location.href = url;
   }
 
 }
