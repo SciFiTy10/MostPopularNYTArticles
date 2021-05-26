@@ -1,8 +1,20 @@
-<div>
-    <div>Title: {{ title }}</div>
-    <div>{{ byline }}</div>
-    <div>Abstract: {{ abstract }}</div>
-    <div>Image: {{ imageUrl }}</div>
+<mat-card class="mat-elevation-z2 card-width">
+    <mat-card-header>
+        <mat-card-title>{{ title }}</mat-card-title>
+        <mat-card-subtitle>{{ byline }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="imageUrl" [alt]="alt">
+    <mat-card-content>
+        <p class="card-margin">
+          {{ abstract }}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button 
+            (click)="openArticle(url)"
+            class="card-margin" 
+            mat-raised-button 
+            color="primary">VIEW ARTICLE</button>
+    </mat-card-actions>
     <div>Section: {{ section }}</div>
-    <div>Url: {{ url }}</div>
-</div>
+</mat-card>
