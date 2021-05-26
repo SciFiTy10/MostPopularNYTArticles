@@ -1,4 +1,4 @@
-<div *ngIf="response">
+<div *ngIf="response" fxLayout="row" fxLayoutGap="20px">
     <div *ngFor="let article of response">
         <app-article
             [title] = "article.title"
