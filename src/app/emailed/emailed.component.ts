@@ -12,6 +12,8 @@ export class EmailedComponent implements OnInit {
 
   response: EmailedArticle[] | undefined;
 
+  regularDistribution = 100/3;
+
   constructor(private emailedService: EmailedService) { }
 
   ngOnInit(): void {
