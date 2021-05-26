@@ -1,14 +1,18 @@
-<div *ngIf="response" fxLayout="row" fxLayoutGap="20px">
-    <div *ngFor="let article of response">
-        <app-article
-            [title] = "article.title"
-            [byline] = "article.byline"
-            [abstract] = "article.abstract"
-            [section] = "article.section"
-            [imageUrl] = "article.media[0]['media-metadata'][0].url"
-            [alt] = "article.media[0].caption"
-            [url] = "article.url"
-        ></app-article>
-    </div>
+<div *ngIf="response" fxLayout="row wrap" fxLayoutGap="16px grid">
+    <app-article
+        fxFlex.xs="100%" 
+        fxFlex.sm="100%"
+        fxFlex.md="50%"
+        fxFlex.lg="33%"
+        fxFlex.xl="33%"
+        *ngFor="let article of response"
+        [title] = "article.title"
+        [byline] = "article.byline"
+        [abstract] = "article.abstract"
+        [section] = "article.section"
+        [imageUrl] = "article.media[0]['media-metadata'][0].url"
+        [alt] = "article.media[0].caption"
+        [url] = "article.url"
+    ></app-article>
 </div>
 
