@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  //declare an attribute for the title
   title = 'Most Popular NYT Articles';
 
   constructor() { }

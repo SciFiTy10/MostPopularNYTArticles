@@ -11,20 +11,27 @@ export class ViewedService {
 
   constructor(private httpClient: HttpClient) { }
 
+  //set the content-type
   httpHeader = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
   }  
 
+  //set the base url
   endpoint = 'https://api.nytimes.com/svc/mostpopular/v2/viewed/';
 
+  //in the interest of time, I chose to set the key here
+  //as a best practice, this would typically be set on the server
   key = 'pgTAl06h8ezKAAWwINIwRDcWZBNSZmWp';
 
+  //get the viewed articles
   getViewedArticles(period: number = 1): Observable<ViewedArticle[]> {
     return this.httpClient.get<any>(this.endpoint + period + '.json?api-key=' + this.key)
     .pipe(
+      //grab the results from the response object
       map((data) => data.results),
+      //only return articles with an image
       map((x: Array<ViewedArticle>) => x.filter(obj => obj.media.length > 0)),
       catchError(this.handleError<ViewedArticle[]>('getViewedArticles', []))
     )
@@ -39,8 +46,8 @@ export class ViewedService {
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 
-      // TODO: send the error to remote logging infrastructure
-      console.error(error); // log to console instead
+      //print to the console
+      console.error(error);
 
       // Let the app keep running by returning an empty result.
       return of(result as T);

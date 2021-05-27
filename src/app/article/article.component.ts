@@ -9,6 +9,7 @@ export class ArticleComponent implements OnInit {
 
   constructor() { }
 
+  //declare props
   @Input() title = '';
   @Input() byline = '';
   @Input() abstract = '';
@@ -20,8 +21,8 @@ export class ArticleComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //open an article via its url
   openArticle(url: string): void{
     location.href = url;
   }
-
 }

@@ -10,14 +10,15 @@ export class MainContentComponent implements OnInit {
 
   constructor(private router: Router) { }
 
+  //declare attributes for the currentRoute and the heading above the articles
   currentRoute: string = '';
-
   heading: string = '';
 
   ngOnInit(): void {
     this.setRouterSubscriber();
   }
 
+  //listen for changes to the route
   setRouterSubscriber(): void{
     this.router.events.subscribe((res) => { 
       this.currentRoute = this.router.url;
@@ -25,6 +26,7 @@ export class MainContentComponent implements OnInit {
     })
   }
 
+  //set the heading based on the route value
   setHeading(): void{
     switch(this.currentRoute){
       case '/shared': {
@@ -41,5 +43,4 @@ export class MainContentComponent implements OnInit {
       }
     }
   }
-
 }
