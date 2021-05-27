@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EmailedArticle } from '../../EmailedArticle';
+import { EmailedArticle } from '../../interfaces/EmailedArticle';
 import { Observable } from 'rxjs';
 import { EmailedService } from '../emailed.service';
 

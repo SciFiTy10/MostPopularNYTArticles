@@ -13,6 +13,7 @@ import {MatRippleModule} from '@angular/material/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './header/header.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { SharedComponent } from './shared/shared.component';
 
 
 
@@ -22,7 +23,8 @@ import { MainContentComponent } from './main-content/main-content.component';
     EmailedComponent,
     ArticleComponent,
     HeaderComponent,
-    MainContentComponent
+    MainContentComponent,
+    SharedComponent
   ],
   imports: [
     BrowserModule,
