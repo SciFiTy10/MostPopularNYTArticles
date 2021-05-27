@@ -1,0 +1,17 @@
+<mat-card 
+    fxLayout="row"
+    class="mat-elevation-z2 article-card" 
+    matRipple 
+    (click)="openArticle(url)">
+    <img 
+        mat-card-image 
+        [src]="imageUrl" 
+        [alt]="alt"
+        class="article-image"
+        >
+    <mat-card-header
+        >
+        <mat-card-title class="card-header">{{ title }}</mat-card-title>
+        <mat-card-subtitle class="card-header">{{ byline }}</mat-card-subtitle>
+    </mat-card-header>
+</mat-card>

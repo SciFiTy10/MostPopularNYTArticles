@@ -1,0 +1,23 @@
+<div class="outer-div" fxLayout="row">
+    <div 
+        class="left-section"
+        fxFlex="20%"
+        fxHide.lt-sm>
+    </div>
+    <div 
+        class="center-section"
+        fxFlex.xl="60%"
+        fxFlex.lg="60%"
+        fxFlex.md="60%"
+        fxFlex.sm="100%"
+        fxFlex.xs="100%">
+        <app-navigation></app-navigation>
+        <h1 class="navigation-heading">{{ heading }}</h1>
+        <router-outlet></router-outlet>
+    </div>
+    <div 
+        class="right-section"
+        fxFlex="20%"
+        fxHide.lt-sm>
+    </div>
+</div>
