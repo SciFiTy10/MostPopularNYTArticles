@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewedArticle } from '../../interfaces/ViewedArticle';
-import { ViewedService } from '../shared.service';
+import { ViewedService } from '../viewed.service';
 
 @Component({
   selector: 'app-viewed',
@@ -11,7 +11,7 @@ export class ViewedComponent implements OnInit {
 
   response: ViewedArticle[] | undefined;
 
-  constructor(private emailedService: ViewedService) { }
+  constructor(private viewedService: ViewedService) { }
 
   ngOnInit(): void {
     this.getViewed();

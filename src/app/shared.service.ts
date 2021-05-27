@@ -24,9 +24,8 @@ export class SharedService {
   getSharedArticles(period: number = 1): Observable<SharedArticle[]> {
     return this.httpClient.get<any>(this.endpoint + period + '/facebook.json?api-key=' + this.key)
     .pipe(
-      map((data) => {
-        return data.results;
-      }),
+      map((data) => data.results),
+      map((x: Array<SharedArticle>) => x.filter(obj => obj.media.length > 0)),
       catchError(this.handleError<SharedArticle[]>('getSharedArticles', []))
     )
   }

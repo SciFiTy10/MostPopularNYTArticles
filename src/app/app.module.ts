@@ -15,6 +15,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { SharedComponent } from './shared/shared.component';
 import { ViewedComponent } from './viewed/viewed.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -36,7 +37,8 @@ import { ViewedComponent } from './viewed/viewed.component';
     MatCardModule,
     MatButtonModule,
     MatRippleModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
