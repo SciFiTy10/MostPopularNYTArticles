@@ -16,6 +16,7 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { SharedComponent } from './shared/shared.component';
 import { ViewedComponent } from './viewed/viewed.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NavigationComponent } from './navigation/navigation.component';
 
 
 
@@ -27,7 +28,8 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     MainContentComponent,
     SharedComponent,
-    ViewedComponent
+    ViewedComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
