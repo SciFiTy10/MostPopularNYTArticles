@@ -24,9 +24,8 @@ export class ViewedService {
   getViewedArticles(period: number = 1): Observable<ViewedArticle[]> {
     return this.httpClient.get<any>(this.endpoint + period + '.json?api-key=' + this.key)
     .pipe(
-      map((data) => {
-        return data.results;
-      }),
+      map((data) => data.results),
+      map((x: Array<ViewedArticle>) => x.filter(obj => obj.media.length > 0)),
       catchError(this.handleError<ViewedArticle[]>('getViewedArticles', []))
     )
   }

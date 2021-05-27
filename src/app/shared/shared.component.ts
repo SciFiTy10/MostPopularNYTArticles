@@ -11,7 +11,7 @@ export class SharedComponent implements OnInit {
 
   response: SharedArticle[] | undefined;
 
-  constructor(private emailedService: SharedService) { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit(): void {
     this.getShared();
