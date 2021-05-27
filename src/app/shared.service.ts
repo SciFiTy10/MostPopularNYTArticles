@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-import { EmailedArticle } from '../interfaces/EmailedArticle';
+import { SharedArticle } from '../interfaces/SharedArticle';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EmailedService {
+export class SharedService {
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,17 +17,17 @@ export class EmailedService {
     })
   }  
 
-  endpoint = 'https://api.nytimes.com/svc/mostpopular/v2/emailed/';
+  endpoint = 'https://api.nytimes.com/svc/mostpopular/v2/shared/';
 
   key = 'pgTAl06h8ezKAAWwINIwRDcWZBNSZmWp';
 
-  getEmailedArticles(period: number = 1): Observable<EmailedArticle[]> {
-    return this.httpClient.get<any>(this.endpoint + period + '.json?api-key=' + this.key)
+  getSharedArticles(period: number = 1): Observable<SharedArticle[]> {
+    return this.httpClient.get<any>(this.endpoint + period + '/facebook.json?api-key=' + this.key)
     .pipe(
       map((data) => {
         return data.results;
       }),
-      catchError(this.handleError<EmailedArticle[]>('getEmailedArticles', []))
+      catchError(this.handleError<SharedArticle[]>('getSharedArticles', []))
     )
   }
 
