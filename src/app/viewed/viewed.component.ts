@@ -21,5 +21,4 @@ export class ViewedComponent implements OnInit {
     this.viewedService.getViewedArticles()
       .subscribe(response => this.response = response);
   }
-
 }

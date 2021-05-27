@@ -10,6 +10,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatRippleModule} from '@angular/material/core';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './header/header.component';
 import { MainContentComponent } from './main-content/main-content.component';
@@ -39,6 +41,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     MatCardModule,
     MatButtonModule,
     MatRippleModule,
+    MatProgressSpinnerModule,
     FlexLayoutModule,
     AppRoutingModule
   ],

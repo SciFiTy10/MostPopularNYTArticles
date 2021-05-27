@@ -1,4 +1,4 @@
-<div *ngIf="response" fxLayout="row wrap" fxLayoutGap="16px grid">
+<div *ngIf="response; else loading" fxLayout="row wrap" fxLayoutGap="16px grid">
     <app-article
         fxFlex.xs="100%" 
         fxFlex.sm="100%"
@@ -15,3 +15,10 @@
         [url] = "article.url"
     ></app-article>
 </div>
+<ng-template #loading>
+    <div fxLayout="row">
+        <div fxFlex="33%"></div>
+        <mat-spinner fxFlex="33%"></mat-spinner>
+        <div fxFlex="33%"></div>
+    </div>
+</ng-template>

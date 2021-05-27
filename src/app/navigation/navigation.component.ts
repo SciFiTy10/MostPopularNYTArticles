@@ -10,7 +10,15 @@ export class NavigationComponent implements OnInit {
 
   constructor(private router: Router) { }
 
+  currentRoute: string = '';
+
   ngOnInit(): void {
+    this.setRouterSubscriber();
   }
 
+  setRouterSubscriber(): void{
+    this.router.events.subscribe((res) => { 
+      this.currentRoute = this.router.url;
+    })
+  }
 }

@@ -15,13 +15,13 @@ export class MainContentComponent implements OnInit {
   heading: string = '';
 
   ngOnInit(): void {
-    this.setHeading();
     this.setRouterSubscriber();
   }
 
   setRouterSubscriber(): void{
     this.router.events.subscribe((res) => { 
       this.currentRoute = this.router.url;
+      this.setHeading();
     })
   }
 
