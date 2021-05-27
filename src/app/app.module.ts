@@ -14,6 +14,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './header/header.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { SharedComponent } from './shared/shared.component';
+import { ViewedComponent } from './viewed/viewed.component';
 
 
 
@@ -24,7 +25,8 @@ import { SharedComponent } from './shared/shared.component';
     ArticleComponent,
     HeaderComponent,
     MainContentComponent,
-    SharedComponent
+    SharedComponent,
+    ViewedComponent
   ],
   imports: [
     BrowserModule,
