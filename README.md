@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/SciFiTy10/burger-restaurant">
+  <a href="https://github.com/SciFiTy10/MostPopularNYTArticles">
     <img src="image/emailed.png" alt="Logo" width="80" height="80">
   </a>
 
