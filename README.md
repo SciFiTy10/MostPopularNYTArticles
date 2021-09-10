@@ -11,13 +11,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/SciFiTy10/burger-restaurant">
-    <img src="media/burger_logo.png" alt="Logo" width="80" height="80">
+    <img src="image/emailed.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Most Popular NYT Articles</h3>
 
   <p align="center">
-    The world famous Big Kahuna Burger restaurant from numerous Quentin Tarantino films.
+    The most emailed, shared to Facebook, and most viewed articles from the New York Times.
     <br />
     <a href="https://github.com/SciFiTy10/MostPopularNYTArticles"><strong>Explore the docs »</strong></a>
     <br />
